@@ -37,7 +37,7 @@ E enfim para acessarmos a base utilizaremos o mesmo comando do MySQL:\
 ``mysql -u root -p``\
 O password será pedido:\
 ``rootroot``\
-Não sendo necessária a criação da base pois a mesma já está configurada\
+Não sendo necessária a criação da base pois a mesma já está configurada
 
 
 
@@ -47,7 +47,7 @@ Em sua IDE rodar a aplicação com o comando run\
 
 #### Projeto rodando disponível para acessar pela URI: http://localhost:8080
 
-Via terminal é possível checar todos os registros feitos na base\
+Via terminal é possível checar todos os registros feitos na base
 
 
 
