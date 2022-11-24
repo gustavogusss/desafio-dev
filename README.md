@@ -9,7 +9,7 @@ ou rodar a imagem docker que está disponível.
 
 ### Comandos MYSQL
 
-O Mysql precisa estar em execução para ser feito o login:\
+O MySQL precisa estar em execução para ser feito o login:\
 Comandos:\
 ``mysql -u root -p``\
 O password será pedido:\
