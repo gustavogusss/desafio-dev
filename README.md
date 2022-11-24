@@ -43,7 +43,7 @@ Não sendo necessária a criação da base pois a mesma já está configurada
 
 ### Rodando o projeto
 
-Em sua IDE rodar a aplicação com o comando run\
+Em sua IDE rodar a aplicação com o comando run
 
 #### Projeto rodando disponível para acessar pela URI: http://localhost:8080
 
