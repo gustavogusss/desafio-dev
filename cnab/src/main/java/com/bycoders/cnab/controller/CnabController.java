@@ -24,7 +24,7 @@ public class CnabController {
     private CnabService cnabService;
 
     @GetMapping("/")
-    public String show() {
+    public String show(){
         return "index";
     }
 

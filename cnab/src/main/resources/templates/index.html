@@ -1,63 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/mystyle.css">
   <title>Upload CNAB</title>
 </head>
 <body>
 
-<section class="my-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 mx-auto">
-        <h2>Upload Image Example</h2>
-        <p th:text="${message}" th:if="${message ne null}" class="alert alert-primary"></p>
-        <form method="post" th:action="@{/upload}" enctype="multipart/form-data">
-          <div class="form-group">
-            <input type="file" name="cnab" accept=".txt" class="form-control-file">
-          </div>
-          <button type="submit" class="btn btn-primary">Upload image</button>
-        </form>
-        <span th:if="${msg != null}" th:text="${msg}"></span>
-      </div>
-    </div>
+<!--<section>-->
+<!--  <div class="container">-->
+<!--    <div>-->
+<!--      <div>-->
+<!--        <h2>Upload Image Example</h2>-->
+<!--        <form method="post" th:action="@{/upload}" enctype="multipart/form-data">-->
+<!--          <div class="form-group">-->
+<!--            <input required type="file" name="cnab" accept=".txt" class="form-control-file">-->
+<!--          </div>-->
+<!--          <button type="submit" class="btn btn-primary">Upload image</button>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<form method="post" th:action="@{/upload}" enctype="multipart/form-data">
+  <div class="file has-name is-boxed">
+    <label class="file-label">
+      <input id="file" class="file-input" required type="file" name="cnab" accept=".txt">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Choose a file…
+        </span>
+      </span>
+      <span id="file-name" class="file-name">
+        ...
+      </span>
+    </label>
   </div>
-</section>
+  <button class="button is-primary">Enviar</button>
+</form>
 
+<script>
+  document.getElementById('file').onchange = function() {
+    document.getElementById("file-name").innerHTML = this.value;
+  };
 
-<!--<form id="form">-->
-<!--  <input id="input" type="file"/>-->
-<!--  <button type="submit">Enviar</button>-->
-<!--</form>-->
+</script>
 
-<!--<script>-->
-<!--  const form = document.getElementById("form");-->
-<!--  const input = document.getElementById("input");-->
-
-<!--  form.addEventListener("submit", event => {-->
-
-<!--    function getBase64(file) {-->
-<!--      var reader = new FileReader();-->
-<!--      reader.readAsDataURL(file);-->
-<!--      return reader.result;-->
-<!--    }-->
-
-<!--    event.preventDefault();-->
-
-
-<!--    const path = "/enviarr";-->
-<!--    const formData = new FormData();-->
-
-<!--    formData.append("input", input.files[0]);-->
-
-<!--    fetch(path, {-->
-<!--      method: "post",-->
-<!--      body: formData-->
-<!--    }).catch(console.error)-->
-
-<!--  })-->
-<!--</script>-->
 </body>
 </html>
