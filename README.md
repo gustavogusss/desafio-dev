@@ -4,18 +4,18 @@ Este projeto foi desenvolvido em Java 17, portanto será necessário ter esta JD
 
 ## MySQL
 
-Para rodar este projetos é necessário ter instalado em sua máquina o MySQL 
+Para rodar este projetos é necessário ter instalado em sua máquina o MySQL\
 ou rodar a imagem docker que está disponível.
 
 ### Comandos MYSQL
 
-O Mysql precisa estar em execução para ser feito o login:
-Comandos:
-``mysql -u root -p``
-O password será pedido:
-``rootroot``
-Será necessário apenas criar a base de dados com o comando:
-``CREATE DATABASE bycoders`` 
+O Mysql precisa estar em execução para ser feito o login:\
+Comandos:\
+``mysql -u root -p``\
+O password será pedido:\
+``rootroot``\
+Será necessário apenas criar a base de dados com o comando:\
+``CREATE DATABASE bycoders``\
 E assim que o rodar o projeto a tabela de CNAB já estará disponível para uso
 
 
