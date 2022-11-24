@@ -1,3 +1,58 @@
+# Como rodar este projeto
+
+Este projeto foi desenvolvido em Java 17, portanto será necessário ter esta JDK rodando para sua execução.
+
+## MySQL
+
+Para rodar este projetos é necessário ter instalado em sua máquina o MySQL 
+ou rodar a imagem docker que está disponível.
+
+### Comandos MYSQL
+
+O Mysql precisa estar em execução para ser feito o login:
+Comandos:
+``mysql -u root -p``
+O password será pedido:
+``rootroot``
+Será necessário apenas criar a base de dados com o comando:
+``CREATE DATABASE bycoders`` 
+E assim que o rodar o projeto a tabela de CNAB já estará disponível para uso
+
+
+
+##Imagem Docker
+
+Necessário ter o docker instalado na máquina e rodando.
+Abrir a pasta do projeto e entrar na pasta cnab pelo terminal de comando utilizando comando ``cd``.
+ex:.
+``cd Desktop/desafio-dev/cnab``
+Ou abrir o terminal nesta pasta via IDE que é o que eu recomendo.
+Ao entrar na pasta digitar o comando para iniciar a imagem: 
+``docker compose up -d``
+seguido do comando: 
+``docker run --name basic-mysql --rm -v /tmp/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=rootroot -e MYSQL_DATABASE=bycoders -p 3306:3306 -it mysql:8.0``
+Agora iniciaremos o bash para termos acesso à nossa base usando o comando:
+``docker exec -it basic-mysql /bin/bash``
+E enfim para acessarmos a base utilizaremos o mesmo comando do MySQL:
+``mysql -u root -p``
+O password será pedido:
+``rootroot``
+Não sendo necessária a criação da base pois a mesma já está configurada
+
+
+
+### Rodando o projeto
+
+Em sua IDE rodar a aplicação com o comando run
+
+#### Projeto rodando disponível para acessar pela URI: http://localhost:8080
+
+Via terminal é possível checar todos os registros feitos na base
+
+
+
+
+
 # Desafio programação - para vaga desenvolvedor
 
 Por favor leiam este documento do começo ao fim, com muita atenção.
